@@ -2,7 +2,17 @@
 <div class="container">
 	<div class="row">
 		<div class="span12">
-			Hello World
+			<h1> DevCup 2013 <small> test run </small> </h1>
+
+			<% if user_signed_in? %>
+				<%= link_to current_user.email, edit_user_registration_path %> &nbsp; 
+				<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+			<% else %>
+				<%= link_to "Login", new_user_session_path %> &nbsp; 
+				<%= link_to "Register", new_user_registration_path %>
+			<% end %>
+
+			<hr />
 		</div>
 	</div>
 </div>
