@@ -1,2 +1,10 @@
 
-Hellowwwssss pooooowws!
+WebGeek DevCup 2013
+
+Team JAM (test run)
+
+<ul>
+<% @members.each do |m| %>
+	<li> <%= m.completeName %> </li>
+<% end %>
+</ul>
